@@ -1,0 +1,7 @@
+[doc]
+name = "1-general"
+bundle = "https://tectonicredirectmirrorabc.netlify.app/tectonic-default"
+
+[[output]]
+name = "1-general"
+type = "pdf"
