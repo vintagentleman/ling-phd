@@ -50,7 +50,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Интерпретация как основа создания корпусов}
+    \frametitle{Интерпретация как неизбежность}
     \framesubtitle{\autocite[6--12]{brown_yule:1983}}
 
     \begin{quote}
@@ -62,7 +62,29 @@
     \end{quote}
 \end{frame}
 
-% TODO
+\section{Типология корпусов}
+
+\frame{\tableofcontents[currentsection]}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{Классификация}
+    \framesubtitle{\autocite[21--22]{zakharov_bogdanova:2011}}
+
+    \begin{tabularx}{\textwidth}{XX}
+        Признак & Типы корпусов \\ \midrule \midrule
+        Тип языковых данных & Письменные, устные, смешанные \\ \midrule
+        <<Параллельность>> & Одно-, дву-, многоязычные \\ \midrule
+        <<Литературность>> & Литературные, диалектные, разговорные, терминологические, смешанные \\ \midrule
+        Цель & Многоцелевые, специализированные \\ \midrule
+        Жанр & Литературные, фольклорные, драматургические, публицистические \\ \midrule
+        Доступность & Свободно доступные, коммерческие, закрытые \\ \midrule
+        Назначение & Исследовательские, иллюстративные \\ \midrule
+        Динамичность & Динамические (мониторные), статические \\ \midrule
+        Разметка & Размеченные, неразмеченные \\ \midrule
+        Характер разметки & Морфологические, синтаксические, семантические, просодические\ldots \\ \midrule
+        Объем текстов & Полнотекстовые, <<фрагментнотекстовые>> \\
+    \end{tabularx}
+\end{frame}
 
 \section{Разметка корпусов}
 
@@ -80,26 +102,49 @@
 
 \begin{frame}
     \frametitle{Немного о стандартах}
-    \framesubtitle{\url{https://xkcd.com/927}}
+    \framesubtitle{\href{https://xkcd.com/927}{\texttt{xkcd.com}}}
     \centering
-    \includegraphics[width=.9\textwidth]{/home/ksipunin/Projects/ling-phd/appl/1-corpora/img/standards.png}
-    % TODO Fix absolute path
+    \includegraphics[width=.75\textwidth]{/home/ksipunin/Projects/ling-phd/appl/1-corpora/img/standards.png}
 \end{frame}
 
 \subsection{Форматы морфосинтаксической разметки}
 
 \frame{\tableofcontents[currentsection, currentsubsection]}
 
-\begin{frame}
+\begin{frame}[fragile]
     \frametitle{Universal Dependencies}
-    content...
+    \framesubtitle{\autocite{universal_dependencies}}
+
+    \begin{itemize}
+        \item >\,200 трибанков на >\,100 языках
+        \item Используются для множества NLP-задач, ср.\ библиотеку Stanza
+        \item Вместо XML используется CoNLL-U
+    \end{itemize}
+
+    \vfill
+
+    \begin{Verbatim}[fontsize=\scriptsize, gobble=8]
+        # source = Codex Marianus, Matthew 5
+        # text = око за око и зѫбъ за зѫбъ
+        # sent_id = 50674
+        ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC
+        1 око око NOUN Nb Case=Acc|Gender=Neut|Number=Sing 0 root 0:root ref=MATT_5.38
+        1.1 око око NOUN Nb Case=Acc|Gender=Neut|Number=Sing _ _ 1:conj ref=MATT_5.38
+        2 за за ADP R- _ 3 case 3:case ref=MATT_5.38
+        3 око око NOUN Nb Case=Acc|Gender=Neut|Number=Sing 1 obl 1:obl:за ref=MATT_5.38
+        4 и и CCONJ C- _ 1 cc 1:cc ref=MATT_5.38
+        5 зѫбъ зѫбъ NOUN Nb Case=Acc|Gender=Masc|Number=Sing 1 conj 1.1:dep ref=MATT_5.38
+        6 за за ADP R- _ 7 case 7:case ref=MATT_5.38
+        7 зѫбъ зѫбъ NOUN Nb Case=Acc|Gender=Masc|Number=Sing 5 orphan 1.1:obl:за ref=MATT_5.38
+    \end{Verbatim}
 \end{frame}
 
 \begin{frame}
     \frametitle{MULTEXT-East}
+    \framesubtitle{\autocite{multext_east}}
 
     \begin{itemize}
-        \item Спецификация для 20~языков \autocite{erjavec:2021}
+        \item Спецификация для 20~языков (используется в TreeTagger)
         \item Лексиконы
         \item Параллельный корпус романа <<1984>> на 12~языках
     \end{itemize}
@@ -111,9 +156,31 @@
     \end{block}
 \end{frame}
 
-\begin{frame}
-    \frametitle{PROIEL}
-    content...
+\begin{frame}[fragile]
+    \frametitle{Syntacticus}
+    \framesubtitle{\href{http://dev.syntacticus.org/}{\texttt{dev.syntacticus.org}}}
+
+    \begin{itemize}
+        \item Трибанки PROIEL, TOROT и ISWOC на древних языках
+        \item Датасеты конвертированы в CoNLL-U
+        \item Не поддерживается
+
+    \begin{block}{Пример токена}
+        \begin{Verbatim}[fontsize=\scriptsize, gobble=8]
+        <token id="674995"
+               form="warþ"
+               citation-part="MATT 9.25"
+               lemma="wairþan"
+               part-of-speech="V-"
+               morphology="3suia----i"
+               head-id="674993"
+               relation="pred"
+               presentation-after=" "
+               foreign-ids="segment_id=143,token_id=2434,witness=CA"
+        />
+        \end{Verbatim}
+    \end{block}
+    \end{itemize}
 \end{frame}
 
 \subsection{Инструменты}
@@ -121,17 +188,40 @@
 \frame{\tableofcontents[currentsection, currentsubsection]}
 
 \begin{frame}
-    \frametitle{ANNIS}
-    content...
+    \frametitle{TXM}
+    \framesubtitle{\autocite{heiden:2010}, \href{https://txm.gitpages.huma-num.fr/textometrie/en/index.html}{\texttt{txm.gitpages.huma-num.fr}}}
+
+    \begin{itemize}
+        \item Корпус-менеджер с текстометрической спецификой
+        \item От корпусов речей президентов Франции до древнерусских текстов
+        \item Дружит со множеством форматов
+    \end{itemize}
 \end{frame}
 
-% TODO
+\begin{frame}
+    \frametitle{corpus-tools.org}
+    \framesubtitle{\autocite{corpus_tools}}
 
-\section{Источники}
+    \begin{itemize}
+        \item ANNIS~"--- поиск и визуализация уровней разметки
+        \item (Hex)Atomic~"--- многоуровневая разметка
+        \item Pepper~"--- конвертация между форматами
+        \item Salt~"--- модель данных
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Интерлингва для форматов}
+    \centering
+    \includegraphics[width=.75\textwidth]{/home/ksipunin/Projects/ling-phd/appl/1-corpora/img/pepper_formats_salt.png}
+\end{frame}
+
+\section{Литература}
 
 \frame{\tableofcontents[currentsection]}
 
-\begin{frame}{Источники}
+\begin{frame}[allowframebreaks]
+    \frametitle{Литература}
     \nocite{*}
     \printbibliography
 \end{frame}
