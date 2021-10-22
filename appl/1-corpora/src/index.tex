@@ -1,3 +1,146 @@
 \include{_preamble}
 
+\frame{\titlepage}
+
+\section{Вопросы терминологии}
+
+\frame{\tableofcontents[currentsection]}
+
+\begin{frame}
+    \frametitle{Хрестоматийное определение}
+    \framesubtitle{\autocite[7]{zakharov_bogdanova:2011}}
+
+    \begin{block}{Корпусная лингвистика}
+        Раздел компьютерной лингвистики, занимающийся разработкой общих принципов построения и использования лингвистических корпусов (корпусов текстов) с применением компьютерных технологий.
+    \end{block}
+
+    \vfill
+
+    \begin{block}{Корпус}
+        Большой, представленный в машиночитаемом виде, унифицированный, структурированный, размеченный, филологически компетентный массив языковых данных, предназначенный для решения конкретных лингвистических задач.
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Определение пожестче}
+    \framesubtitle{\autocite[22--23, 56]{stefanowitsch:2020}}
+
+    \begin{block}{Corpus linguistics}
+        The investigation of linguistic research questions that have been framed in terms of the conditional distribution of linguistic phenomena in a linguistic corpus.
+    \end{block}
+
+    \vfill
+
+    \begin{block}{Linguistic corpus}
+        A collection of samples of language use with the following properties: \begin{itemize}
+            \item the instances of language use contained in it are \textit{authentic};
+            \item the collection is \textit{representative} of the language or language variety under investigation;
+            \item the collection is \textit{large}.
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Corpus-based linguistics?}
+    \framesubtitle{\autocite{weisser:2016}}
+
+    \begin{quote}
+        [\ldots] the term corpus linguistics, while shorter and more popular, tends to give the impression that it is a branch of linguistics rather than just a methodology which can be applied to any existing branch of linguistics. \underline{Our interest should be in language, not corpora per se.}
+    \end{quote}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Интерпретация как основа создания корпусов}
+    \framesubtitle{\autocite[6--12]{brown_yule:1983}}
+
+    \begin{quote}
+        It must be further emphasised that, however objective the notion of `text' may appear as we have defined it (`the verbal record of a communicative act'), the perception and interpretation of each text is essentially subjective.
+    \end{quote}
+
+    \begin{quote}
+        In discussing texts we idealise away from this variability of the experiencing of the text and assume what Schutz has called `the reciprocity of perspective'. [\ldots]
+    \end{quote}
+\end{frame}
+
+% TODO
+
+\section{Разметка корпусов}
+
+\frame{\tableofcontents[currentsection]}
+
+\begin{frame}
+    \frametitle{Виды разметки}
+
+    \begin{itemize}
+        \item Лингвистическая: морфология, синтаксис, семантические роли, именованные сущности
+        \item Паралингвистическая: особенности почерка, иллюстрации к рукописи; просодика, жесты
+        \item Экстралингвистическая: характеристики автора, жанр, историческая эпоха и место создания
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Немного о стандартах}
+    \framesubtitle{\url{https://xkcd.com/927}}
+    \centering
+    \includegraphics[width=.9\textwidth]{standards}
+\end{frame}
+
+\subsection{Форматы морфосинтаксической разметки}
+
+\frame{\tableofcontents[currentsection, currentsubsection]}
+
+\begin{frame}
+    \frametitle{Universal Dependencies}
+    content...
+\end{frame}
+
+\begin{frame}
+    \frametitle{MULTEXT-East}
+
+    \begin{itemize}
+        \item Спецификация для 20~языков \autocite{erjavec:2021}
+        \item Лексиконы
+        \item Параллельный корпус романа <<1984>> на 12~языках
+    \end{itemize}
+
+    \vfill
+
+    \begin{block}{Пример тегсета}
+        \textit{он} \linebreak \texttt{P-3msn} \linebreak мест., тип не задан, 3~л., м.~р., ед.~ч., им.~п.
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{PROIEL}
+    content...
+\end{frame}
+
+\subsection{Инструменты}
+
+\frame{\tableofcontents[currentsection, currentsubsection]}
+
+\begin{frame}
+    \frametitle{ANNIS}
+    content...
+\end{frame}
+
+% TODO
+
+\section{Источники}
+
+\frame{\tableofcontents[currentsection]}
+
+\begin{frame}{Источники}
+    \nocite{*}
+    \printbibliography
+\end{frame}
+
+\begin{frame}{}
+    \centering
+
+    \vfill
+    Q\&A
+    \vfill
+\end{frame}
+
 \include{_postamble}

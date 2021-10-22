@@ -1,13 +1,14 @@
 .PHONY: all
 
-all: tex biber tex tex xdvipdfmx
+TECTONIC = tectonic -X compile --pass tex --keep-intermediates
 
-tex:
-	tectonic -X compile --pass tex --keep-intermediates src/index.tex
-
-biber:
+all:
+	$(TECTONIC) src/index.tex
 	biber src/index
-
-xdvipdfmx:
+	$(TECTONIC) src/index.tex
+	$(TECTONIC) src/index.tex
 	xdvipdfmx src/index.xdv
 	mv index.pdf build/
+
+debug:
+	$(TECTONIC) src/index.tex --print
