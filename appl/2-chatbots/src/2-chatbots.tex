@@ -1,0 +1,88 @@
+\section{Чат-боты}
+
+\frame{\tableofcontents[currentsection]}
+
+\begin{frame}
+    \frametitle{Вехи}
+
+    \begin{enumerate}
+        \item<1-> ELIZA (Дж.~Вейценбаум, 1966) \begin{itemize}
+            \item пародия на психотерапевта
+            \item шаблоны запросов и правила их трансформации в ответы
+            \item управление памятью
+        \end{itemize}
+
+        \item<2-> SHRDLU (Т.~Виноград, 1968--1970) \begin{itemize}
+            \item бот функционирует в мире объемных геометрических фигур
+            \item умеет перемещать объекты, запоминает их названия, величину и цвет
+            \item умеет разрешать кореференцию
+        \end{itemize}
+
+        \item<3-> PARRY (1971) \begin{itemize}
+            \item бот для изучения шизофрении
+            \item управление уровнем страха и раздражения
+            \item первый бот, формально прошедший тест Тьюринга
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Подход на правилах}
+
+    \begin{itemize}
+        \item шаблоны для обработки запросов (регулярные выражения, etc.)
+        \item правила ранжирования совпадающих шаблонов
+        \item заготовленные ответы
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Подход на правилах сегодня}
+
+    \begin{Verbatim}[fontsize=\scriptsize, gobble=8]
+        state: Peterburg
+          q!: * (~печаль|~тлен|~боль|~грусть|~скорбь|~страдание|~страдать|~плакать) *
+          random:
+            a: В этом мире есть боль и печаль... Но радости и любви в нём гораздо больше!
+            a: Только тот узнает счастье, кто печаль перенесёт.
+            a: Радости нет без печали.
+    \end{Verbatim}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Корпусный подход}
+
+    \begin{block}{Дано}
+        \begin{itemize}
+            \item Корпус обучающих диалогов, содержащих пары <<вопрос~--- ответ>>
+            \item Контекст предшествующего диалога с пользователем
+            \item Текущий запрос пользователя
+        \end{itemize}
+    \end{block}
+
+    \begin{alertblock}{Найти}
+        Ответ на запрос, уместный в контексте диалога
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Подходы к нахождению ответа}
+
+    \begin{columns}
+        \column{.5\textwidth}
+        \begin{block}{Response by retrieval}
+            \begin{itemize}
+                \item Вытаскиваем ответ на похожий запрос из корпуса
+                \item Похожесть вычисляем на основе какой-либо метрики
+                \item Или используем bi-encoder
+            \end{itemize}
+        \end{block}
+
+        \column{.5\textwidth}
+        \begin{block}{Response by generation}
+            \begin{itemize}
+                \item Используем encoder-decoder, сразу генерируем ответ
+            \end{itemize}
+        \end{block}
+    \end{columns}
+\end{frame}
