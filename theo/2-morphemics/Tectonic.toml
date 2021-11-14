@@ -1,0 +1,8 @@
+[doc]
+name = '2-morphemics'
+bundle = 'https://data1.fullyjustified.net/tlextras-2020.0r0.tar'
+
+[[output]]
+name = 'default'
+type = 'pdf'
+index = '0-index.tex'
