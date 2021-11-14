@@ -25,6 +25,9 @@
     }
 }
 
+% Убираем тире между частями описания
+\renewcommand*{\newblockpunct}{\addperiod\space\bibsentence}
+
 % Убираем неразрывные пробелы перед двоеточием и точкой с запятой
 \makeatletter
 
@@ -80,11 +83,6 @@
 
 % Короткое тире в интервалах страниц
 \DefineBibliographyExtras{russian}{\protected\def\bibrangedash{\textendash}}
-
-% Счётчик цитируемых источников
-\usepackage{totcount}
-\newtotcounter{citnum}
-\AtEveryBibitem{\stepcounter{citnum}}
 
 % Источники
 \addbibresource{refs.bib}
