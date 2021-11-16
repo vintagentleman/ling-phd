@@ -71,11 +71,10 @@
 
 \begin{frame}
     \frametitle{Морф}
-    \framesubtitle{\autocites[161]{bloomfield:1973}{haspelmath:2020}}
 
-    \begin{block}{Morpheme (simple form)}
-        A linguistic form which bears no partial phonetic-semantic resemblance to any other form
-    \end{block}
+    \begin{exampleblock}{\autocite[161]{bloomfield:1973}}
+        A linguistic form which bears no partial phonetic-semantic resemblance to any other form, is a \textit{simple} form or \textit{morpheme}.
+    \end{exampleblock}
 
     \begin{table}
         \begin{tabularx}{\textwidth}{XXX}
@@ -88,7 +87,7 @@
     \begin{columns}
         \column{.5\textwidth}
         \begin{center}
-            \onslide<2->{\hfill эвенк.\ \textit{Бихава̄виэтэм.}} \onslide<3->{\hfill $\xrightarrow{?}$}
+            \onslide<2->{\hfill эвенк.\ \textit{бихава̄виэтэм}} \onslide<3->{\hfill $\xrightarrow{?}$}
         \end{center}
 
         \column{.5\textwidth}
@@ -169,11 +168,42 @@
 \frame{\tableofcontents[currentsection,currentsubsection]}
 
 \begin{frame}
-    \frametitle{Этап 1}
-    content...
+    \frametitle{Дистрибутивный анализ}
+    \framesubtitle{\autocite[48--51]{apresyan:1966}}
+
+    \begin{enumerate}
+        \item \textbf{Сегментация} с опорой на словообразовательные модели
+        \item \textbf{Идентификация}~--- объединение морфов в дистрибутивные классы: \begin{itemize}
+            \item В дополнительной дистрибуции~$\rightarrow$ алломорфы
+            \item В контрастной дистрибуции~$\rightarrow$ разные морфемы
+            \item В свободном варьировании~$\rightarrow$ алломорфы
+        \end{itemize}
+        \item \textbf{Верификация} результата
+    \end{enumerate}
 \end{frame}
 
-% TODO
+\begin{frame}
+    \frametitle{Морфемный анализ как \textit{последний} этап сегментации слова}
+    \framesubtitle{\autocites{bogdanov:1997}[38]{plungyan:2003}}
+
+    Метод последовательных приближений <<сверху вниз>>:
+    \begin{enumerate}
+        \item Сопоставление со словоформами, входящими в общую словоизменительную парадигму: \textit{вмешательств-о}~
+        \item Сопоставление со словами, входящими в общее словообразовательное гнездо: \textit{в-меш-а-тельств-о}
+        \item Максимальное* расширение круга словоформ, привлекаемых для сопоставления: \textit{в-меш-а-тель-ств-о}
+    \end{enumerate}
+
+    \vfill
+
+    \onslide<2->{
+        \begin{table}
+            \begin{tabularx}{\textwidth}{rl}
+                \alert{\textit{пират-ы}} & \alert{\textit{томат-ы}} \\
+                \alert{\textit{пират-ами}} & \alert{\textit{томат-ами}} \\
+            \end{tabularx}
+        \end{table}
+    }
+\end{frame}
 
 \subsection{Классификация морфем}
 
@@ -201,7 +231,7 @@
             \item Кумулятивный характер
         \end{itemize}
         \item Префикс: \textit{ин-вариант} (в рус.\ только словоизменительное значение)
-        \item Суффикс: \textit{знач-ени|j|-е}
+        \item Суффикс: \textit{знач-ени/j/-е}
         \item Постфикс: \textit{-ся;} \textit{-то}, \textit{-либо}, \textit{-нибудь}
     \end{itemize}
 \end{frame}
@@ -221,7 +251,7 @@
             \item \textit{yu-daxxal-u} `его вводят'
             \item \textit{dāxil-un} `чужой; пришелец; гость'
         \end{itemize}
-        \item<3-> Циркумфикс: \begin{itemize}
+        \item<3-> Циркумфикс (конфикс): \begin{itemize}
             \item нем.\ \textit{ge-~$+$ -t}
             \item рус.\ \textit{до-~$+$ -ся}
         \end{itemize}
@@ -249,10 +279,16 @@
 
 \begin{frame}
     \frametitle{Агглютинация и фузия}
-    % TODO
-\end{frame}
+    \framesubtitle{\autocites[201--202]{lyons}[40--46, 62--67]{plungyan:2003}}
 
-\begin{frame}
-    \frametitle{Аддитивная модель морфологии}
-    % TODO
+    \begin{table}
+        \begin{tabularx}{\textwidth}{XXX}
+             & 1~морф $=$ 1~значение & 1~морф $\neq$ 1~значение \\ \midrule \midrule
+            Детерминированность \linebreak сегментации
+                & Агглютинация \linebreak тур.\ \textit{ev-ler-i(n)-den}
+                & Кумуляция \linebreak рус.\ \textit{копыт-ами} \\ \midrule
+            Недетерминированность \linebreak сегментации
+                & Фузия \linebreak рус.\ \textit{пе-чь} \textit & \\
+        \end{tabularx}
+    \end{table}
 \end{frame}
