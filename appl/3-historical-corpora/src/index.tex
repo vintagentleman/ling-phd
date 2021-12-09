@@ -1,0 +1,155 @@
+% \include{_preamble}
+
+\frame{\titlepage}
+
+\section{Вопросы терминологии}
+\frame{\tableofcontents[currentsection]}
+
+\begin{frame}
+  \frametitle{Славянская ветвь}
+
+  \begin{itemize}
+    \item Южнославянская ветвь \begin{itemize}
+      \item \ldots
+      \item \alert<2->{Старославянский} $\rightarrow$ \alert<2->{Церковнославянский}
+    \end{itemize}
+    \item Восточнославянская ветвь \begin{itemize}
+      \item \alert<2->{Древнерусский} \begin{itemize}
+        \item \alert<2->{Старорусский} $\rightarrow$ Современный русский
+        \item Украинский
+        \item Белорусский
+      \end{itemize}
+      \item \alert<2->{Древненовгородский диалект}
+      \item \ldots
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Южнославянские языки}
+
+  \begin{block}{Старославянский (Old Church Slavonic)}
+    Первый литературный язык памятников славянской письменности 9--11~вв.
+    Он же древнецерковнославянский, он же староболгарский, он же Жора\ldots
+  \end{block}
+
+  \begin{block}<2->{Церковнославянский (Church Slavonic)}
+    Кодифицированный вариант старославянского языка, используемый для богослужения.
+    Дожил до наших дней, преподается в духовных семинариях.
+  \end{block}
+
+  \vfill
+
+  \begin{itemize}
+    \item<3-> У обоих языков одинаковые ISO-коды
+    \item<3-> Еще больше терминологическую ситуацию запутывают \textit{изводы}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Восточнославянские языки}
+
+  \begin{block}{Древнерусский (Old East Slavic)}
+    Язык восточнославянской этнической общности. Материал~--- устная речь и светская литература.
+    В 14--15~вв.\ из него выделились украинский и белорусский.
+  \end{block}
+
+  \begin{block}<2->{Старорусский (Middle Russian)}
+    Древнерусский язык в период 14--17~вв.\
+    Соответствует этапу от распада общеславянского единства до формирования русского литературного языка.
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Корпуса исторические vs диахронические}
+  \framesubtitle{\autocite[242]{meyer:2006}}
+
+  \begin{block}{Исторический корпус}
+    Корпус текстов на исторической разновидности современного языка или на древнем языке.
+    $\sim$~Общеязыковой корпус
+  \end{block}
+
+  \begin{block}{Диахронический корпус}
+    Корпус текстов на нескольких исторических разновидностях одного языка.
+    $\sim$~Специальный корпус
+  \end{block}
+\end{frame}
+
+\section{Морфологически размеченные корпуса}
+
+\subsection{Древнерусский подкорпус НКРЯ}
+\frame{\tableofcontents[currentsection,currentsubsection]}
+
+\begin{frame}
+  \frametitle{}
+\end{frame}
+
+\subsection{Корпус берестяных грамот}
+\frame{\tableofcontents[currentsection,currentsubsection]}
+
+\begin{frame}
+  \frametitle{}
+\end{frame}
+
+\subsection{Церковнославянский подкорпус НКРЯ}
+\frame{\tableofcontents[currentsection,currentsubsection]}
+
+
+
+\subsection{Старорусский подкорпус НКРЯ}
+\frame{\tableofcontents[currentsection,currentsubsection]}
+
+
+
+\subsection{Манускрипт}
+\frame{\tableofcontents[currentsection,currentsubsection]}
+
+
+
+\subsection{СКАТ}
+\frame{\tableofcontents[currentsection,currentsubsection]}
+
+
+
+\section{Трибанки}
+\frame{\tableofcontents[currentsection]}
+
+\begin{frame}
+  \frametitle{TOROT}
+
+  \begin{itemize}
+    \item Тексты взяты из Хельсинкского корпуса
+    \item Переведены в Unicode, подчистую вырезана вся пунктуация
+    \item Сконвертирован в UD
+  \end{itemize}
+\end{frame}
+
+\section{Итоги}
+\frame{\tableofcontents[currentsection]}
+
+\begin{frame}
+  \frametitle{Морфологически размеченные корпуса}
+
+  \begin{table}[t]
+    \small
+    \begin{tabularx}{\linewidth}{XXXXXX}
+      \toprule
+      \thead{Корпус} & \thead{Охват, \\ вв.} & \thead{Объём, \\ с/у} & \thead{Разметка} & \thead{Дизамби"= \\ гуация} & \thead{Леммати"= \\ зация} \\ \midrule\midrule
+      НКРЯ: \linebreak др.-р. & XI--XIV & 500~тыс. & Ручная & Есть & Есть \\ \midrule
+      НКРЯ: \linebreak б.~гр. & XI--XV & 20~тыс. & Ручная & Есть & Есть \\ \midrule
+      СКАТ & XV--XVII & 500~тыс. & Ручная & Есть & Есть \\ \midrule
+      НКРЯ: \linebreak ц.-сл. & XVII--XX & 4,7~млн & Словарная & Нет & Есть \\ \midrule
+      НКРЯ: \linebreak ст.-р. & XV--XVII & 7~млн & Словарная & Нет & Нет \\ \midrule
+      Манускрипт & X--XIV & 3,5~млн & Словарная & Есть & Есть \\ \bottomrule
+    \end{tabularx}
+  \end{table}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Проблемы}
+
+  \begin{enumerate}
+    \item Closed source. К корпусам, где больше всего данных (НКРЯ и Манускрипт), нет открытого полнотекстового доступа
+    \item Цифровизация как неизбежность. Что (какие лингвистические единицы) и как (к вопросу о кодировке) представлять~--- все решают по-своему
+  \end{enumerate}
+\end{frame}

@@ -17,3 +17,4 @@
 |---|---|
 | [`/appl/1-corpora`](/appl/1-corpora) | Корпусная лингвистика |
 | [`/appl/2-chatbots`](/appl/2-chatbots) | Диалоговые системы |
+| [`/appl/3-historical-corpora`](/appl/3-historical-corpora) | Исторические корпуса |
