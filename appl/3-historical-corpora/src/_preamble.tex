@@ -8,9 +8,9 @@
 \setmainlanguage[babelshorthands]{russian}
 \setotherlanguage{english}
 
-\setmainfont{CMU Serif}
-\setsansfont{CMU Sans Serif}
-\setmonofont{CMU Typewriter Text}
+\setmainfont{Liberation Serif}
+\setsansfont{Liberation Sans}
+\setmonofont{Liberation Mono}
 
 \usepackage{booktabs}
 \usepackage{multirow}
@@ -33,9 +33,17 @@
 \usepackage{covington}
 \renewcommand*\glosslinetrans[1]{`#1'}
 
+% https://tex.stackexchange.com/a/30726
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
 % Библиография
 \input{_biblatex}
 
-\title[]{Исторические корпуса восточнославянской письменности}
+\title[]{Исторические корпуса \\ восточнославянской письменности}
 
 \begin{document}

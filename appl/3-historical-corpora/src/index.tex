@@ -50,8 +50,8 @@
   \frametitle{Восточнославянские языки}
 
   \begin{block}{Древнерусский (Old East Slavic)}
-    Язык восточнославянской этнической общности. Материал~--- устная речь и светская литература.
-    В 14--15~вв.\ из него выделились украинский и белорусский.
+    Язык восточнославянской этнической общности. Материал~--- устная речь и~светская литература.
+    В 14--15~вв.\ выделились украинский и белорусский.
   \end{block}
 
   \begin{block}<2->{Старорусский (Middle Russian)}
@@ -62,7 +62,6 @@
 
 \begin{frame}
   \frametitle{Корпуса исторические vs диахронические}
-  \framesubtitle{\autocite[242]{meyer:2006}}
 
   \begin{block}{Исторический корпус}
     Корпус текстов на исторической разновидности современного языка или на древнем языке.
@@ -73,55 +72,191 @@
     Корпус текстов на нескольких исторических разновидностях одного языка.
     $\sim$~Специальный корпус
   \end{block}
+
+  \blfootnote{\autocite[242]{meyer:2006}}
 \end{frame}
 
 \section{Морфологически размеченные корпуса}
 
-\subsection{Древнерусский подкорпус НКРЯ}
+\subsection{Исторические подкорпуса НКРЯ}
 \frame{\tableofcontents[currentsection,currentsubsection]}
 
 \begin{frame}
-  \frametitle{}
-\end{frame}
+  \frametitle{Древнерусский корпус}
+  \framesubtitle{Наполнение}
 
-\subsection{Корпус берестяных грамот}
-\frame{\tableofcontents[currentsection,currentsubsection]}
+  Тексты XI--XIV~вв., 500~тыс. с/у
+
+  \begin{itemize}
+    \item повести, летописи
+    \item «публицистическая» литература
+    \item небольшой массив церковнославянских памятников
+  \end{itemize}
+
+  \blfootnote{\autocites{sichinava:2014}{mishina_pichkhadze:2015}}
+\end{frame}
 
 \begin{frame}
-  \frametitle{}
+  \frametitle{Древнерусский корпус}
+  \framesubtitle{Разметка}
+
+  \begin{block}{Морфология}
+    Ручная разметка с обращением к базе прецедентов
+  \end{block}
+
+  \begin{block}{Дополнительная разметка}
+    \begin{itemize}
+      \item ударные и клитические формы
+      \item филологическая адресация по номеру листа и строки
+      \item ономастические, текстологические пометы
+      \item для переводных памятников~--- перевод на греческий
+    \end{itemize}
+  \end{block}
 \end{frame}
 
-\subsection{Церковнославянский подкорпус НКРЯ}
-\frame{\tableofcontents[currentsection,currentsubsection]}
+\begin{frame}
+  \frametitle{Корпус берестяных грамот}
+  \framesubtitle{\url{http://gramoty.ru/birchbark/}}
 
+  \centering
+  \begin{figure}[b]
+    \includegraphics[width=.9\textwidth]{photo_novgorod_0644_1.jpg_thumb-large}
+  \end{figure}
 
+  \begin{figure}[t]
+    \includegraphics[width=.9\textwidth]{drawing_novgorod_0644_1}
+  \end{figure}
+\end{frame}
 
-\subsection{Старорусский подкорпус НКРЯ}
-\frame{\tableofcontents[currentsection,currentsubsection]}
+\begin{frame}
+  \frametitle{Церковнославянский подкорпус}
+  \framesubtitle{Наполнение}
 
+  \begin{itemize}
+    \item XVII--XX~вв., 4,7~млн с/у
+    \item Тексты, созданные уже в период книгопечатания
+    \item 60\,\%~--- используемые в современной богослужебной практике
+  \end{itemize}
 
+  \blfootnote{\autocite{polyakov:2015}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Церковнославянский подкорпус}
+  \framesubtitle{Пример грамматической модели}
+
+  \begin{table}
+    \small
+    \begin{tabularx}{\textwidth}{XXXXX}
+      \toprule
+      \thead{Парадигма} & \thead{N1t} & \thead{N1t*} & \thead{N1j} & \thead{N1k}   \\ \midrule\midrule
+      \textit{Пример}   & рабъ        & сонъ         & конь        & отрокъ        \\ \midrule
+      \textit{Основа}   & раб+ъ       & со*н+ъ       & кон+ь       & отро(к|ц|ч)+ъ \\ \midrule
+      sg,nom            & ъ           & 2ъ           & ь           & ъ             \\ \midrule
+      sg,gen            & а           & а            & я           & а             \\ \midrule
+      sg,voc            & е           & е            & ю           & 3е            \\ \midrule
+      pl,acc            & ы/=gen      & ы/=gen       & и/=gen      & ы/=gen        \\ \midrule
+      pl,loc            & ѣхъ         & ѣхъ          & ехъ         & 2ѣхъ          \\ \midrule
+      du,dat/ins        & ома         & ома          & ема         & ома           \\ \bottomrule
+    \end{tabularx}
+  \end{table}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Старорусский корпус}
+  \framesubtitle{Наполнение}
+
+  \begin{itemize}
+    \item XV--XVII~вв., 7~млн с/у
+    \item Летописи, повести, деловые документы\ldots
+    \item «[О]громный объем текстов и их орфографическая и языковая пестрота»
+  \end{itemize}
+
+  \blfootnote{\autocite{lyashevskaya:2016}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Старорусский корпус}
+  \framesubtitle{Гибридный морфологический анализ}
+
+  \begin{block}{Первый подход}
+    Адаптируем грамматический словарь для церковнославянского
+  \end{block}
+
+  \begin{block}<2->{Второй подход}
+    \begin{enumerate}
+      \item Размечаем как будто современный русский (MyStem и TreeTagger)
+      \item Все, что не разметилось, смотрим в базе древнерусских прецедентов
+    \end{enumerate}
+  \end{block}
+\end{frame}
 
 \subsection{Манускрипт}
 \frame{\tableofcontents[currentsection,currentsubsection]}
 
-
+\begin{frame}
+  \frametitle{}
+  content...
+\end{frame}
 
 \subsection{СКАТ}
 \frame{\tableofcontents[currentsection,currentsubsection]}
 
-
+\begin{frame}
+  \frametitle{}
+  content...
+\end{frame}
 
 \section{Трибанки}
-\frame{\tableofcontents[currentsection]}
+
+\subsection{Семейство проектов PROIEL}
+\frame{\tableofcontents[currentsection,currentsubsection]}
+
+\begin{frame}
+  \frametitle{PROIEL}
+  \framesubtitle{\url{http://dev.syntacticus.org/}}
+
+  Корпус новозаветных текстов на различных древних языках: древнегреческом, латыни, готском, древнеармянском, старославянском. \linebreak
+
+  По назначению специальный параллельный корпус для изучения прагматических феноменов: порядка слов, употребления артиклей и дискурсивных частиц и др. \linebreak
+
+  На ст.-сл.~--- Мариинское Евангелие из Corpus Cyrillo-Methodianum Helsingiense, 57~тыс.\ с/у. Сконвертирован в UD (единственный текст из раздела Old Church Slavonic).
+
+  \blfootnote{\autocite{haug_johndal:2008}}
+\end{frame}
 
 \begin{frame}
   \frametitle{TOROT}
+  \framesubtitle{\url{https://nestor.uit.no/}}
+
+  \begin{block}{Наполнение}
+    \begin{itemize}
+      \item ст.-сл.~--- 160~тыс.\ с/у
+      \item др.-р.~--- 85~тыс.\ с/у
+      \item ст.-р.~--- 60~тыс.\ с/у
+    \end{itemize}
+  \end{block}
+
+  \vfill
 
   \begin{itemize}
-    \item Тексты взяты из Хельсинкского корпуса
-    \item Переведены в Unicode, подчистую вырезана вся пунктуация
-    \item Сконвертирован в UD
+    \item Тексты из разных источников
+    \item Все переведено в Юникод, сконвертировано в PROIEL XML
+    \item Др.-р.\ сегмент переведен в UD
   \end{itemize}
+
+  \blfootnote{\autocite{eckhoff_berdicevskis:2015}}
+\end{frame}
+
+\subsection{НКРЯ}
+\frame{\tableofcontents[currentsection,currentsubsection]}
+
+\begin{frame}
+  \frametitle{Старорусский корпус}
+
+  Небольшой кусочек (34~тыс.\ с/у)
+
+  \blfootnote{\autocite{lyashevskaya:2019}}
 \end{frame}
 
 \section{Итоги}
@@ -134,7 +269,7 @@
     \small
     \begin{tabularx}{\linewidth}{XXXXXX}
       \toprule
-      \thead{Корпус} & \thead{Охват, \\ вв.} & \thead{Объём, \\ с/у} & \thead{Разметка} & \thead{Дизамби"= \\ гуация} & \thead{Леммати"= \\ зация} \\ \midrule\midrule
+      \thead{Корпус} & \thead{Охват, \\ вв.} & \thead{Объем, \\ с/у} & \thead{Разметка} & \thead{Дизамби"= \\ гуация} & \thead{Леммати"= \\ зация} \\ \midrule\midrule
       НКРЯ: \linebreak др.-р. & XI--XIV & 500~тыс. & Ручная & Есть & Есть \\ \midrule
       НКРЯ: \linebreak б.~гр. & XI--XV & 20~тыс. & Ручная & Есть & Есть \\ \midrule
       СКАТ & XV--XVII & 500~тыс. & Ручная & Есть & Есть \\ \midrule
@@ -148,8 +283,8 @@
 \begin{frame}
   \frametitle{Проблемы}
 
-  \begin{enumerate}
+  \begin{itemize}
     \item Closed source. К корпусам, где больше всего данных (НКРЯ и Манускрипт), нет открытого полнотекстового доступа
     \item Цифровизация как неизбежность. Что (какие лингвистические единицы) и как (к вопросу о кодировке) представлять~--- все решают по-своему
-  \end{enumerate}
+  \end{itemize}
 \end{frame}
