@@ -1,0 +1,49 @@
+\documentclass[xetex, aspectratio=169, russian]{beamer}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage[autostyle]{csquotes}
+\setmainlanguage[babelshorthands]{russian}
+\setotherlanguage{english}
+
+\setmainfont{CMU Serif}
+\setsansfont{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{ltablex}
+\usepackage{paralist}
+\keepXColumns
+\renewcommand\theadfont{\normalsize}
+
+\usepackage{fvextra}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage[edges]{forest}
+\graphicspath{{../img/}}
+
+\usepackage{mathtools}
+\usepackage{amssymb}
+
+\usepackage{covington}
+\renewcommand*\glosslinetrans[1]{`#1'}
+
+% Библиография
+\input{_biblatex}
+
+% https://tex.stackexchange.com/a/30726
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+\title[]{Синтаксис}
+
+\begin{document}
