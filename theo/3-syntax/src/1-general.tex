@@ -1,2 +1,258 @@
 \section{Предмет синтаксиса}
+
+\subsection{Синтаксис и другие языковые уровни}
+\frame{\tableofcontents[currentsection,currentsubsection]}
+
+\begin{frame}
+  \frametitle{Общее определение}
+
+  \begin{block}{Синтаксис}
+    \begin{enumerate}
+      \item характерные для конкретных языков средства и правила создания речевых единиц;
+      \item раздел грамматики, изучающий процессы порождения речи: \begin{itemize}
+        \item сочетаемость и порядок следования слов внутри предложения,
+        \item а также общие свойства предложения как автономной единицы языка и~высказывания как части текста.
+      \end{itemize}
+    \end{enumerate}
+    [< др.-греч. σύνταξις `построение', `порядок']
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Уровневая модель языка}
+
+  \begin{table}[t]
+    \begin{tabularx}{.9\textwidth}{XXX}
+      Уровень & Эмическая единица & Этическая единица \\ \midrule \midrule
+      Синтаксис & Предложение & Высказывание \\ \midrule
+      \ldots & \ldots & \ldots \\
+    \end{tabularx}
+  \end{table}
+
+  \onslide<2->{
+    \begin{table}[t]
+      \begin{tabularx}{.9\textwidth}{XX}
+        Уровень & Процесс \\ \midrule \midrule
+        Дискурс & Предложение $\rightarrow$ Текст \\ \midrule
+        Синтаксис & Слово $\rightarrow$ Предложение \\ \midrule
+        Морфология & Морфема $\rightarrow$ Слово \\ \midrule
+        Фонология & Фонема $\rightarrow$ Комбинация фонем \\
+      \end{tabularx}
+    \end{table}
+  }
+\end{frame}
+
+\begin{frame}
+  \frametitle{Модель с центральным положением синтаксиса}
+  \framesubtitle{<<Перевернутая Y-модель>>}
+
+  \begin{center}
+    \begin{forest}
+      [\textit{лексикон} \\ Синтаксис, align=center
+        [\textit{синтаксическая структура}
+          [Фонологический модуль
+            [\textit{фонетическая репрезентация} (PF)]
+          ]
+          [Семантический модуль
+            [\textit{семантическая репрезентация} (LF)]
+          ]
+        ]
+      ]
+    \end{forest}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Синтаксис и просодика}
+
+  \begin{block}{Интонационные конструкции (Е.\,А.~Брызгунова)}
+    \begin{enumerate}
+      \item Такие у них обычаи.
+      \item \alert{Какие} у них обычаи?
+      \item Какие у них \alert{обычаи}?
+      \item А у них? Какие у них обычаи?
+      \item Какие у них обычаи!
+      \item Какие у них \alert{обычаи}!
+      \item \alert{Какие} у них обычаи!
+    \end{enumerate}
+  \end{block}
+
+  Открытые вопросы:
+  \begin{itemize}
+    \item Зависимость порядка слов от синтаксической структуры
+    \item Взаимозаменяемость синт.\ и прос.\ средств: ср.\ интонация vs клефт
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Синтаксис и морфология}
+
+  \begin{itemize}
+    \item Морфологические формы~--- <<кирпичики>> синтаксических структур
+    \item Синтаксические типы словосочетаний во многом дублируют части речи
+  \end{itemize}
+
+  \vfill
+
+  \begin{block}{Варианты выражения одного грамматического значения}
+    \begin{itemize}
+      \item Компаратив аналитический \textit{(более старый)} vs синтетический \textit{(старше)}
+      \item Аналитическое будущее (\textit{буду писать}) vs перфективация \textit{(напишу)}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Синтаксис и лексика}
+
+  \begin{itemize}
+    \item Лексическое значение накладывает ограничения на синтаксические структуры: неодуш.\ сущ.\ маловероятны как подлежащие при перех.\ гл.
+    \item В зависимости от лексического значения различаются синтаксические категории и реализации синтаксических моделей \begin{itemize}
+      \item \textit{des vins de France} `происхождение'
+      \item \textit{une table de bois} `материал'
+      \item \textit{la beauté du paysage} `качество'
+    \end{itemize}
+    \item синтаксическая структура дифференцирует значения слова: ср.\ \textit{décoller qch} vs \textit{l'avion a décollé}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Параллельная модель (Р.~Джекендофф)}
+  \small
+
+  \begin{columns}
+    \column{.33\textwidth}
+    \begin{forest}
+      [Фонология \\ (фонологические правила), align=center
+        [\subnode{ph}{\textit{фонологические структуры}}, align=center]
+      ]
+    \end{forest}
+    \column{.33\textwidth}
+    \begin{forest}
+      [Синтаксис \\ (синтаксические правила), align=center
+        [\subnode{sx}{\textit{синтаксические структуры}}, align=center]
+      ]
+    \end{forest}
+        \column{.33\textwidth}
+    \begin{forest}
+      [Семантика \\ (семантические правила), align=center
+        [\subnode{sm}{\textit{концептуальные структуры}}, align=center]
+      ]
+    \end{forest}
+  \end{columns}
+
+  \begin{tikzpicture}[overlay,remember picture,<->,black,dashed,bend angle=45,bend right]
+    \draw($(pic cs:ph)+(1,-1.6)$) to ($(pic cs:sx)+(-1,-1.6)$);
+    \draw($(pic cs:sx)+(1,-1.6)$) to ($(pic cs:sm)+(-1,-1.6)$);
+    \draw ($(pic cs:ph)+(0,-1.6)$) to ($(pic cs:sm)+(0,-1.6)$);
+  \end{tikzpicture}
+\end{frame}
+
+\subsection{Подходы к описанию синтаксиса}
+\frame{\tableofcontents[currentsection,currentsubsection]}
+
+\begin{frame}
+  \frametitle{Треугольник Фреге}
+  \centering
+
+  \begin{tikzpicture}
+    \draw (0,0) node[anchor=south]{Знак}
+    -- (2,-4) node[anchor=north]{Смысл}
+    -- (-2,-4) node[anchor=north]{Значение}
+    -- cycle;
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Основные подходы}
+
+  \begin{enumerate}
+    \item Структурный: языковые формы рассматриваются в самом себе безотносительно к отображаемой ими действительности
+    \item Логический: языковая форма сопоставляется со структурой логического суждения
+    \item Семантический: сопоставление со структурой действительности, описываемой при помощи формы
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Другие подходы}
+  \framesubtitle{Коммуникативный синтаксис}
+
+  \begin{itemize}
+    \item Актуальное членение (< Ш.~Балли: thème и propos)
+    \item Порядок слов
+    \item Коммуникативная парадигматика: \begin{itemize}
+      \item Она кричала \textit{громко}. $\downarrow$~--- рема
+      \item Она \textit{громко} кричала. $\downarrow$~--- рематический модификатор
+      \item \textit{Громко} $\uparrow$ | она не кричала. $\downarrow$~--- контрастная тема
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Другие подходы}
+  \framesubtitle{Прагматический синтаксис}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Другие подходы}
+  \framesubtitle{Функциональный синтаксис}
+\end{frame}
+
+% TODO подробно о трансформац
+
+\section{Синтаксические объекты}
+
+\subsection{Словосочетание}
+\frame{\tableofcontents[currentsection,currentsubsection]}
+
+\begin{frame}
+  \frametitle{Особенности синтаксических объектов}
+
+  \begin{enumerate}
+    \item (Счетная) бесконечность множества
+    \item Способность к неограниченному усложнению \begin{enumerate}
+      \item Добавление зависимого слова к одному из компонентов
+      \item Подчинение всего выражения новой синтаксической вершине
+    \end{enumerate}
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Словосочетание}
+
+  сужение понимания
+\end{frame}
+
+\begin{frame}
+  \frametitle{Критерии словосочетания}
+
+  \begin{enumerate}
+    \item Грамматический~--- отсутствие предикативности
+    \item Функциональный~--- расчлененное выражение понятия
+    \item Структурный~--- конструкция из 2+ словоформ, связанных СинтО
+    \item Семантический~--- выражение СинтО
+    \item Парадигматический~--- система форм, изоморфная парадигме вершины
+  \end{enumerate}
+\end{frame}
+
+\subsection{Предложение}
+\frame{\tableofcontents[currentsection,currentsubsection]}
+
+\begin{frame}
+  \frametitle{Предикативность}
+  content...
+\end{frame}
+
+\section{Представление синтаксической структуры}
 \frame{\tableofcontents[currentsection]}
+
+\begin{frame}
+  \frametitle{Отношения вложения}
+  content...
+\end{frame}
+
+\begin{frame}
+  \frametitle{Отношения подчинения}
+  content...
+\end{frame}
