@@ -219,14 +219,14 @@
   \frametitle{Виды трансформаций}
 
   \begin{enumerate}
-    \item Количественные: добавление или опущение элемента
-    \item Качественные: замена элемента
-    \item Перестановочные: изменение расположения элементов
+    \item \textbf{Количественные:} добавление или опущение элемента
+    \item \textbf{Качественные:} замена элемента
+    \item \textbf{Перестановочные:} изменение расположения элементов
   \end{enumerate}
 
   \vfill
 
-  \begin{block}{Качественные}
+  \begin{block}<2->{Качественные}
     \begin{enumerate}
       \item Изменение морфологической формы: \textit{Demain il part $\rightarrow$ partira pour Paris}
       \item Транспозиция: \textit{Il écoutait attentivement $\rightarrow$ avec attention}
@@ -238,8 +238,24 @@
 
 \section{Синтаксические объекты}
 
-\subsection{Словосочетание}
+\subsection{Предложение}
 \frame{\tableofcontents[currentsection,currentsubsection]}
+
+\begin{frame}
+  \frametitle{Текст}
+
+  Свойства: \begin{enumerate}
+    \item Законченность (оценка со стороны говорящего)
+    \item Целостность (со стороны слушающего)
+  \end{enumerate}
+
+  \vfill
+
+  $\rightarrow$ Сверхфразовое единство \\
+  $\rightarrow$ Простое предложение \\
+  $\rightarrow$ Словосочетание \\
+  $\rightarrow$ Слово
+\end{frame}
 
 \begin{frame}
   \frametitle{Особенности синтаксических объектов}
@@ -254,28 +270,71 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Словосочетание}
-  content...
+  \frametitle{Предложение}
+
+  Синтаксическая конструкция, которая является \begin{itemize}
+    \item относительно независимым от контекста высказыванием,
+    \item обладающим коммуникативной функцией
+    \item и интонационным оформлением,
+    \item включающим грамматически связанные формы слов
+    \item и построенным на основе отвлеченного грамматического образца~--- структурной схемы.
+  \end{itemize}
 \end{frame}
-
-\begin{frame}
-  \frametitle{Критерии словосочетания}
-
-  \begin{enumerate}
-    \item Грамматический~--- отсутствие предикативности
-    \item Функциональный~--- расчлененное выражение понятия
-    \item Структурный~--- конструкция из 2+ словоформ, связанных СинтО
-    \item Семантический~--- выражение СинтО
-    \item Парадигматический~--- система форм, изоморфная парадигме вершины
-  \end{enumerate}
-\end{frame}
-
-\subsection{Предложение}
-\frame{\tableofcontents[currentsection,currentsubsection]}
 
 \begin{frame}
   \frametitle{Предикативность}
-  content...
+
+  \begin{block}{Предикация}
+    Установление связи между предложением и ситуацией
+  \end{block}
+
+  \vfill
+
+  \begin{itemize}
+    \item \textit{Лошадь белая}~--- связь устанавливается в самом предложении
+    \item \textit{Белая лошадь}~--- есть пресуппозиция, что связь уже существует
+  \end{itemize}
+\end{frame}
+
+\subsection{Словосочетание}
+\frame{\tableofcontents[currentsection,currentsubsection]}
+
+\begin{frame}
+  \frametitle{Словосочетание}
+
+  Синтаксическая конструкция, образующаяся на основе подчинительных связей. Обязательно есть главный компонент (вершина) и 1+ зависимых
+
+  \vfill
+
+  \begin{block}<2->{Критерии}
+    \begin{enumerate}
+      \item Грамматический~--- отсутствие предикативности
+      \item Функциональный~--- расчлененное выражение понятия
+      \item Структурный~--- конструкция из 2+ словоформ, связанных СинтО
+      \item Семантический~--- выражение СинтО
+      \item Парадигматический~--- система форм, изоморфная парадигме вершины
+    \end{enumerate}
+  \end{block}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Классификация}
+
+  \begin{itemize}
+    \item По частеречной принадлежности вершины \begin{itemize}
+      \item Глагольные
+      \item Субстантивные
+      \item Адъективные
+      \item Наречные
+    \end{itemize}
+    \item Свободные vs несвободные~--- по наличию комплетивной связи
+    \item По типу конструктивной сложности \begin{itemize}
+      \item Простое: \textit{верблюжья шерсть}
+      \item Сложное (куст): \textit{гладкая верблюжья шерсть}
+      \item Комбинированное (дерево): \textit{пальто из верблюжьей шерсти}
+    \end{itemize}
+  \end{itemize}
 \end{frame}
 
 \section{Представление синтаксической структуры}
@@ -283,10 +342,27 @@
 
 \begin{frame}
   \frametitle{Отношения вложения}
-  content...
+
+  \Tree [.S [.NP This ] [.VP [.V is ] [.NP an example sentence. ] ] ]
 \end{frame}
 
 \begin{frame}
   \frametitle{Отношения подчинения}
-  content...
+
+  \begin{center}
+
+    \begin{tikzpicture}
+      \node (is-root) {is}
+      [sibling distance=3cm]
+      child { node {this} }
+      child {
+        node {sentence}
+        [sibling distance=1.5cm]
+        child { node {an} }
+        child { node {example} }
+        child { node {.} }
+        child[missing]
+      };
+    \end{tikzpicture}
+  \end{center}
 \end{frame}
