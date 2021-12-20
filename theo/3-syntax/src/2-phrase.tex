@@ -50,7 +50,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Классификация}
+  \frametitle{Классификация словосочетаний}
 
   \begin{itemize}
     \item По частеречной принадлежности вершины \begin{itemize}
@@ -66,6 +66,11 @@
       \item Комбинированное (дерево): \textit{пальто из верблюжьей шерсти}
     \end{itemize}
   \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Phrase}
+  % TODO
 \end{frame}
 
 \subsection{Подчинительная связь}
@@ -166,18 +171,74 @@
     \begin{tabularx}{.9\textwidth}{XXX}
       & Сильная связь & Слабая связь \\ \midrule \midrule
       Согласование & \textit{большой палец} & \textit{большой дом} \\ \midrule
-      Управление & \textit{писать книгу} & \textcolor{gray}{\textit{писать ручкой}} \\ \midrule
+      Управление & \textit{писать книгу} & \textit{писать ручкой} \\ \midrule
       Примыкание & \textit{стоит дорого} & \textit{стоит рубль} \\
     \end{tabularx}
   \end{table}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Омонимия синтаксических связей}
+  \frametitle{Вариативность и синонимия}
 
+  \begin{itemize}
+    \item стакан воды (N\textsubscript{2})~--- \ldots{} с водой (PP)
+    \item возможность уйти (Inf)~--- \ldots{} ухода (N)~--- \ldots{} для ухода (PP)
+    \item высокорослый юноша (Adj)~--- юноша высокого роста (Adj N\textsubscript{2})
+  \end{itemize}
+\end{frame}
+
+\subsection{Валентность}
+\frame{\tableofcontents[currentsection,currentsubsection]}
+
+\begin{frame}
+  \frametitle{Две валентности}
+
+  \begin{alertblock}{Семантическая валентность}
+    Любая переменная X, входящая в описание значения лексемы L \\
+    $\sim$ Партиципант
+  \end{alertblock}
+
+  \begin{alertblock}{Синтаксическая валентность}
+    Селективный признак, указывающий,
+    что лексема L может иметь слово W в качестве зависимого или вершины
+  \end{alertblock}
+
+  \vfill
+
+  \onslide<2->{
+    \begin{table}
+      \begin{tabularx}{.9\textwidth}{XXX}
+        & Партиципант $+$ & Партиципант $-$ \\ \midrule \midrule
+        Активная в. & \textit{лучше} меня & \textit{пишет} хорошо \\ \midrule
+        Пассивная в. & \textit{красивый конверт} & что \textit{уходит} \\ \midrule
+        & $=$ актант & $=$ сирконстант \\
+      \end{tabularx}
+    \end{table}
+  }
 \end{frame}
 
 \begin{frame}
-  \frametitle{Синонимия синтаксических связей}
+  \frametitle{Семантическая валентность}
 
+  \begin{alertblock}{Валентность}
+    Число актантов, которые может присоединять глагол (Теньер) \\
+    $\sim$ Semantic case (Филлмор), θ-role (Хомский)
+  \end{alertblock}
+
+  \begin{alertblock}{Модель управления}
+    Описание валентностей слова и способов их реализации в тексте
+  \end{alertblock}
+
+  \begin{multicols}{2}
+    \begin{itemize}
+      \item<2-> \textit{побеждать} \begin{enumerate}
+        \item[X] `кто побеждает'~--- N\textsubscript{1}
+        \item[Y] `кого побеждает'~--- N\textsubscript{4}
+        \item[Z] `вид борьбы'~--- PP
+      \end{enumerate}
+    \item<3->
+      \textit{выстрелить:} 4~валентности, 4~актанта \\
+      \textit{промахнуться:} 4~валентности, 1~актант
+    \end{itemize}
+  \end{multicols}
 \end{frame}
