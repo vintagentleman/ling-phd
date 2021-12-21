@@ -157,8 +157,8 @@
   \centering
 
   \begin{tikzpicture}
-    \draw (0,0) node[anchor=south]{Знак}
-    -- (2,-4) node[anchor=north]{Смысл}
+    \draw (0,0) node[anchor=south]{Смысл}
+    -- (2,-4) node[anchor=north]{Знак}
     -- (-2,-4) node[anchor=north]{Значение}
     -- cycle;
   \end{tikzpicture}
@@ -242,7 +242,19 @@
 \begin{frame}
   \frametitle{Отношения вложения}
 
-  \Tree [.S [.NP This ] [.VP [.V is ] [.NP an example sentence. ] ] ]
+  \Tree [.S
+    [.NP This ]
+    [.VP
+      [.V is ]
+      [.NP
+        [.Det an ]
+        [.NP
+          [.Adj example ]
+          [.N sentence. ]
+        ]
+      ]
+    ]
+  ]
 \end{frame}
 
 \begin{frame}

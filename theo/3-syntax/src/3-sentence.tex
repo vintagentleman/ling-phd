@@ -1,7 +1,5 @@
 \section{Предложение}
-
-\subsection{Структурный подход}
-\frame{\tableofcontents[currentsection,currentsubsection]}
+\frame{\tableofcontents[currentsection]}
 
 \begin{frame}
   \frametitle{Предложение}
@@ -28,6 +26,17 @@
     \item \textit{Лошадь белая}~--- связь устанавливается в самом предложении
     \item \textit{Белая лошадь}~--- есть пресуппозиция, что связь уже существует
   \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Полипредикативность}
+
+  \begin{alertblock}{Сложное предложение}
+    Грамматически оформленное сочетание 2+ простых предложений,
+    функционирующая как сообщение о разных ситуациях или разных аспектах одной ситуации
+  \end{alertblock}
+
+  \textit{А Васька слушает да ест}~--- тоже сложное предложение: 2~предикативных центра плюс собственное значение (одновременность действий)
 \end{frame}
 
 \begin{frame}
@@ -65,5 +74,135 @@
 
 \begin{frame}
   \frametitle{Структурные схемы}
-  % TODO
+
+  \begin{alertblock}{Структурная схема}
+    Абстрактный синтаксический образец,
+    по которому может быть построено отдельное минимальное относительно законченное предложение
+  \end{alertblock}
+
+  \vfill
+
+  Схемы характеризуют:
+  \begin{enumerate}
+    \item Формальное устройство
+    \item Семантика
+    \item Парадигматика предложений, построенных по схеме
+    \item Система регулярных реализаций
+    \item Правила распространения
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Схемы невопросительных предложений}
+  \framesubtitle{Двухкомпонентные свободные схемы}
+  \small
+
+  \begin{enumerate}
+    \item с V\textsubscript{fin} \begin{enumerate}
+      \item подлежащно-сказуемостные \begin{itemize}
+        \item N\textsubscript{1} V\textsubscript{fin} `отношение между субъектом и его предикативным признаком~--- действием или процессом': \textit{Лес шумит}
+      \end{itemize}
+      \item не подлежащно-сказуемостные \begin{itemize}
+        \item V\textsubscript{3.\textsc{SG}} Inf `квалификация отвлеченно представленного действия или процесса': \textit{Следует подождать}
+        \item N\textsubscript{2} [\textsc{NEG}] V\textsubscript{3.\textsc{SG}} `отношение между субъектом и его предикативным признаком~--- процессом': \textit{Несчастья не случилось}
+      \end{itemize}
+    \end{enumerate}
+
+    \item<2-> без V\textsubscript{fin} \begin{enumerate}
+      \item лексически неограниченные
+      \item лексически ограниченные \begin{itemize}
+        % \item нет N\textsubscript{2} `несуществование или отсутствие субъекта': \textit{Нет сомнений}
+        \item ни N\textsubscript{2} `несуществование, отсутствие потенциально неединичного субъекта': \textit{Ни звука}
+        % \item никого/ничего N\textsubscript{2}/Adj\textsubscript{2} `полное отсутствие или несуществование субъекта': \textit{Ничего нового}
+        % \item никакого/ни одного/ни единого N\textsubscript{2} `полное отсутствие или несуществование субъекта': \textit{Никакого праздника}
+        \item Pron\textsubscript{\textsc{NEG}} Inf `неосуществление из-за отсутствия необходимых обстоятельств' \textit{Не о чем спорить}
+        \item \ldots
+      \end{itemize}
+    \end{enumerate}
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Схемы невопросительных предложений}
+  \framesubtitle{Фразеологизированные схемы}
+
+  \begin{multicols}{2}
+    \begin{itemize}
+      \item с союзами \begin{itemize}
+        \item N\textsubscript{1} как N\textsubscript{1}
+        \item нет чтобы Inf!
+      \end{itemize}
+      \item с частицами \begin{itemize}
+        \item вот N\textsubscript{1} так N\textsubscript{1}!
+        \item Inf так Inf!
+        \item ох уж эти N\textsubscript{1}!
+      \end{itemize}
+      \item с предлогами \begin{itemize}
+        \item N\textsubscript{1} не в N\textsubscript{1}
+        \item не до N\textsubscript{2}!
+      \end{itemize}
+      \item с местоимениями \begin{itemize}
+        \item всем N\textsubscript{5} N\textsubscript{1}!
+        \item чем не N\textsubscript{1}!
+        \item N\textsubscript{3}-то что!
+      \end{itemize}
+    \end{itemize}
+  \end{multicols}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Распространение}
+
+  \begin{itemize}
+    \item Присловные распространители: \textit{помещение} $\rightarrow$ \textit{жилое помещение}
+    \item Свободный определяющий член: \textit{дом строится} $\rightarrow$ \textit{\ldots{} рабочими}
+    \item Обращение: \textit{привет} $\rightarrow$ \textit{привет, мир}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Модус и диктум}
+
+  \textbf{Диктум}~--- номинативный аспект предложения, \textbf{модус}~--- коммуникативный.
+  Объективная модальность $\sim$ предикативность, выражается всегда.
+  Субъективная может быть выражена или нет по желанию говорящего.
+
+  \vfill
+
+  \begin{itemize}
+    \item Отрицание
+    \item Вопросительность
+    \item Спец.\ лексика (напр.\ модальные глаголы)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Пара слов о типологии}
+
+  \begin{enumerate}
+    \item Номинативный строй \begin{itemize}
+      \item \textit{\textcolor{red}{Студент} проспал}
+      \item \textit{\textcolor{red}{Студент} не завел \textcolor{blue}{будильник}}
+    \end{itemize}
+
+    \item<2-> Эргативный строй \begin{itemize}
+      \item \textit{
+        (\textcolor{cyan}{Студент} {\normalfont [фактитив]} проспал)
+      }
+      \item \textit{
+        (\textcolor{orange}{Студент} {\normalfont [агентив]} не завел \textcolor{cyan}{будильник})
+      }
+      \item<3-> баск.\ \textit{
+        \textcolor{orange}{Ehiztaria\underline{k}} \textcolor{cyan}{otsoa} harraptu du
+      }
+      `\textcolor{orange}{Охотник}' поймал \textcolor{cyan}{волк\underline{а}}'
+    \end{itemize}
+
+    \item<4-> Активный строй \begin{itemize}
+      \item \textit{(\textcolor{violet}{Студент} {\normalfont [актив]} проспал)}
+      \item \textit{(\textcolor{olive}{Студент} {\normalfont [статив]} споткнулся)}
+      \item<5-> дакота \textit{\textcolor{violet}{\underline{wa}-ti}} `я живу'~---
+                \textit{\textcolor{olive}{\underline{ma}-a}} `я умираю'
+    \end{itemize}
+  \end{enumerate}
 \end{frame}
