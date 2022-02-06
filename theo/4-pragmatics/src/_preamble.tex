@@ -1,0 +1,55 @@
+\documentclass[xetex, aspectratio=169, russian]{beamer}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage[autostyle]{csquotes}
+\setmainlanguage[babelshorthands]{russian}
+\setotherlanguage{english}
+
+\setmainfont{Liberation Serif}
+\setsansfont{Liberation Sans}
+\setmonofont{Liberation Mono}
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{ltablex}
+\usepackage{paralist}
+\keepXColumns
+\renewcommand\theadfont{\normalsize}
+
+\usepackage{fvextra}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage[edges]{forest}
+\usepackage{qtree}
+\graphicspath{{../img/}}
+
+\usepackage{tikz}
+\usetikzlibrary{tikzmark}
+\tikzset{>=latex}
+
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{amssymb}
+
+\usepackage{covington}
+\renewcommand*\glosslinetrans[1]{`#1'}
+
+% Библиография
+\input{_biblatex}
+
+% https://tex.stackexchange.com/a/30726
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+\title[]{Коммуникативная лингвистика \\ и лингвистическая прагматика}
+
+\begin{document}

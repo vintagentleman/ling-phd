@@ -11,6 +11,7 @@
 | [`/theo/1-general`](/theo/1-general) | Системно-структурная и функциональная лингвистика |
 | [`/theo/2-morphemics`](/theo/2-morphemics) | Морфемика и словообразование |
 | [`/theo/3-syntax`](/theo/3-syntax) | Синтаксис |
+| [`/theo/4-pragmatics`](/theo/4-pragmatics) | Прагматика |
 
 ## Прикладная лингвистика
 
