@@ -10,7 +10,7 @@
 | [`/theo/2-morphemics`](/theo/2-morphemics) | Морфемика и словообразование |
 | [`/theo/3-syntax`](/theo/3-syntax) | Синтаксис |
 | [`/theo/4-pragmatics`](/theo/4-pragmatics) | Прагматика |
-| [`/theo/5-cognitive-linguistics`](/theo/5-cognitive-linguistics) | Когнитивная лингвистика |
+| [`/theo/5-cognitive-linguistics`](/theo/5-cognitive-linguistics) | Когнитивная лингвистика. Digital Humanities |
 
 ## Прикладная лингвистика
 
