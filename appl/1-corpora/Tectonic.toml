@@ -1,0 +1,7 @@
+[doc]
+name = '1-corpora'
+bundle = 'https://data1.fullyjustified.net/tlextras-2020.0r0.tar'
+
+[[output]]
+name = '1-corpora'
+type = 'pdf'
