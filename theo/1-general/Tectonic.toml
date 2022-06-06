@@ -1,6 +1,6 @@
 [doc]
 name = "1-general"
-bundle = "https://tectonicredirectmirrorabc.netlify.app/tectonic-default"
+bundle = "https://data1.fullyjustified.net/tlextras-2020.0r0.tar"
 
 [[output]]
 name = "1-general"
